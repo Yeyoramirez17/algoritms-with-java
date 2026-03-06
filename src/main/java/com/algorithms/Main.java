@@ -1,16 +1,18 @@
+
 package com.algorithms;
 import java.util.Arrays;
 
 import com.algorithms.search.BinarySearch;
-import com.algorithms.search.LinearSearch;
+// import com.algorithms.search.LinearSearch;
 // import com.algorithms.sort.BubbleSort;
 // import com.algorithms.sort.InsertionSort;
 // import com.algorithms.sort.SelectionSort;
 // import com.algorithms.sort.QuickSort;
-import com.algorithms.sort.MergeSort;
+// import com.algorithms.sort.MergeSort;
+import com.algorithms.sort.CountingSort;
 
 public class Main {
-    public static void main(String[] args) {        
+    public static void main(String[] args) {
         int[] numbers = { 2, 4, 8, 0, 5, 1, 14, 3, 7, 6 };
         System.out.println(Arrays.toString(numbers));
 
@@ -18,7 +20,8 @@ public class Main {
         // InsertionSort.insertionSort(numbers);
         // SelectionSort.selectionSort(numbers);
         // QuickSort.quickSort(numbers, 0, numbers.length - 1);
-        MergeSort.mergeSort(numbers, 0, numbers.length - 1);
+        // MergeSort.mergeSort(numbers, 0, numbers.length - 1);
+        CountingSort.sort(numbers);
         System.out.println(Arrays.toString(numbers));
 
         /* Search Algorithms */
@@ -28,4 +31,5 @@ public class Main {
         int index = BinarySearch.searchRecursive(numbers, 0, numbers.length - 1, toSearch);
         System.out.println(String.format("- To Search %s, Result: [%s] = %s", toSearch, index, numbers[index]));
     }
+
 }
