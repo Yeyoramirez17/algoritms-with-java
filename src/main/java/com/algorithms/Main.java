@@ -2,7 +2,8 @@
 package com.algorithms;
 import java.util.Arrays;
 
-import com.algorithms.search.BinarySearch;
+// import com.algorithms.search.BinarySearch;
+import com.algorithms.search.JumpSearch;
 // import com.algorithms.search.LinearSearch;
 // import com.algorithms.sort.BubbleSort;
 // import com.algorithms.sort.InsertionSort;
@@ -28,7 +29,8 @@ public class Main {
         int toSearch = 14;
         // int index = LinearSearch.search(numbers, toSearch);
         // int index = BinarySearch.search(numbers, toSearch);
-        int index = BinarySearch.searchRecursive(numbers, 0, numbers.length - 1, toSearch);
+        // int index = BinarySearch.searchRecursive(numbers, 0, numbers.length - 1, toSearch);
+        int index = JumpSearch.search(numbers, toSearch);
         System.out.println(String.format("- To Search %s, Result: [%s] = %s", toSearch, index, numbers[index]));
     }
 
